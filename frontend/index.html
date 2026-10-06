@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmeLive - Random Video Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="brand">
+        <span class="logo">OL</span>
+        <h2>OmeLive <span class="live-dot"></span></h2>
+      </div>
+      <div class="controls-top">
+        <select id="countrySelect" class="country-picker">
+          <option value="ALL">🌐 Any Country</option>
+          <option value="JO">🇯🇴 Jordan</option>
+          <option value="US">🇺🇸 United States</option>
+          <option value="GB">🇬🇧 United Kingdom</option>
+          <option value="CA">🇨🇦 Canada</option>
+          <option value="DE">🇩🇪 Germany</option>
+          <option value="FR">🇫🇷 France</option>
+          <option value="TR">🇹🇷 Turkey</option>
+          <option value="SA">🇸🇦 Saudi Arabia</option>
+          <option value="AE">🇦🇪 United Arab Emirates</option>
+          <option value="EG">🇪🇬 Egypt</option>
+        </select>
+        <span id="userCountryBadge" class="badge">Detecting...</span>
+      </div>
+    </header>
+
+    <main class="video-grid">
+      <!-- Remote Video Area -->
+      <div class="video-box remote-box">
+        <video id="remoteVideo" autoplay playsinline></video>
+        <div id="searchOverlay" class="search-overlay">
+          <div class="radar-spinner"></div>
+          <h3 id="searchStatusText">Looking for someone...</h3>
+          <p id="searchSubtext">Connecting with random stranger</p>
+        </div>
+        <div id="remoteBadge" class="video-badge hidden">
+          <span id="remoteCountryText">Stranger</span>
+        </div>
+      </div>
+
+      <!-- Local Video Area -->
+      <div class="video-box local-box">
+        <video id="localVideo" autoplay playsinline muted></video>
+        <div class="video-badge local-badge">
+          <span>You</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bottom Controls -->
+    <footer class="app-controls">
+      <div class="media-toggles">
+        <button id="micToggleBtn" class="ctrl-btn">🎤 Mic</button>
+        <button id="camToggleBtn" class="ctrl-btn">📷 Camera</button>
+        <button id="reportBtn" class="ctrl-btn report-btn" disabled>🚩 Report</button>
+      </div>
+
+      <div class="action-buttons">
+        <button id="nextBtn" class="ctrl-btn primary-btn">NEXT (Space)</button>
+        <button id="stopBtn" class="ctrl-btn secondary-btn">STOP</button>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

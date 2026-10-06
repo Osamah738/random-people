@@ -1,0 +1,6 @@
+{
+  "name": "OmeLive - Random Video Chat",
+  "description": "Real-time random video chat platform connecting real users worldwide via WebRTC with country filtering, reporting, and moderation.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
